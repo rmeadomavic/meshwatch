@@ -1,0 +1,10 @@
+{
+    "name": "MeshWatch",
+    "author": "rmeadomavic",
+    "flags": ["_root"],
+    "api_version": 1,
+    "publish": {
+        "tags": ["networking", "tailscale", "utility"],
+        "description": "Tailscale mesh status in your Quick Access Menu. See which devices are online, measure latency, get alerts when nodes drop."
+    }
+}
