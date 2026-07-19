@@ -1,13 +1,19 @@
 import asyncio
 import json
 import os
+import shutil
 import subprocess
 import time
 from datetime import datetime, timezone
 
 import decky
 
-TAILSCALE_BIN = "/home/deck/bin/tailscale"
+TAILSCALE_DEFAULT_BIN = "/home/deck/bin/tailscale"
+TAILSCALE_BIN = (
+    TAILSCALE_DEFAULT_BIN
+    if os.path.exists(TAILSCALE_DEFAULT_BIN)
+    else shutil.which("tailscale") or TAILSCALE_DEFAULT_BIN
+)
 DEFAULT_POLL_INTERVAL = 30  # seconds
 SETTINGS_FILE = os.path.join(decky.DECKY_PLUGIN_SETTINGS_DIR, "settings.json")
 
