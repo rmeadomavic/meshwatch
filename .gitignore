@@ -2,6 +2,12 @@ node_modules/
 dist/
 .vscode/settings.json
 
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
 # --- Secrets ---
 .env
 .env.*
